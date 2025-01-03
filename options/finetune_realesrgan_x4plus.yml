@@ -36,10 +36,10 @@ queue_size: 180
 # dataset and data loader settings
 datasets:
   train:
-    name: DF2K+OST
+    name: Chinese
     type: RealESRGANDataset
-    dataroot_gt: datasets/DF2K
-    meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale+OST_sub.txt
+    dataroot_gt: datasets/train
+    meta_info: datasets/train/meta_info/meta_info_Chinese_sub.txt
     io_backend:
       type: disk
 
@@ -61,14 +61,14 @@ datasets:
 
     final_sinc_prob: 0.8
 
-    gt_size: 256
+    gt_size: 32
     use_hflip: True
     use_rot: False
 
     # data loader
     use_shuffle: true
     num_worker_per_gpu: 5
-    batch_size_per_gpu: 12
+    batch_size_per_gpu: 8
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
